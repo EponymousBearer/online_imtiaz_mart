@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package payment;
+
+message Transaction {
+    int32 id = 1;
+    int32 user_id = 2;
+    float amount = 3;
+    string status = 4;
+    string transaction_date = 5;
+    string payment_method = 6;
+}
+
+message Product {
+    int32 product_id = 1;
+    int32 quantity = 2;
+}
+
+message Order {
+    int32 user_id = 1;
+    repeated Product products = 2;
+    string status = 3;
+    float total_amount = 4;
+    string order_date = 5;
+}
+
+message Payment {
+    int32 id = 1;
+    int32 user_id = 2;
+    double amount = 3;
+    string currency = 4;
+    string status = 5;
+    string created_at = 6;
+    string updated_at = 7;
+}
+
+message PaymentProcessed {
+    Payment payment = 1;
+}
+
+message PaymentRefunded {
+    Payment payment = 1;
+}
