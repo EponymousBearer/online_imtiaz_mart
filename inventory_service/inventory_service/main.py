@@ -138,4 +138,4 @@ async def delete_inventory(
 
 @app.get("/")
 async def root():
-    return {"message": "Inventory Service is running"}
+    return {"message": "Inventory Service is running..."}
