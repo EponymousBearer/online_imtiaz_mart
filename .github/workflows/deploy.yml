@@ -40,4 +40,4 @@ jobs:
             --image ${{ secrets.DOCKER_HUB_USERNAME }}/inventory_service:latest \
             --target-port 8090 \
             --ingress 'external' \
-            --env-vars 'APP_SETTING=my-setting'
+            --env-vars DATABASE_URL=${{ secrets.DATABASE_URL }}
