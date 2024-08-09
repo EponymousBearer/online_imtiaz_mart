@@ -40,4 +40,4 @@ jobs:
             --image ${{ secrets.DOCKER_HUB_USERNAME }}/inventory_service:latest \
             --target-port 8090 \
             --ingress 'external' \
-            --env-vars DATABASE_URL=${{ secrets.DATABASE_URL }}
+            --env-vars 'DATABASE_URL=postgresql://ziakhan:my_password@postgres_db:5432/mydatabase'
